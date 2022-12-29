@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>틱택토</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css"/>
+    <link rel="stylesheet" href="styles/overlay.css"/>
+    <link rel="stylesheet" href="styles/config.css"/>
+    <link rel="stylesheet" href="styles/game.css"/>
+    <script src="scripts/config.js" defer></script>
+    <script src="scripts/game.js" defer></script>
+    <script src="scripts/app.js" defer></script>
+</head>
+<body>
+    <div id="backdrop"></div>
+    <header id="main-header">
+        <h1>이게 바로 Tic Tac Toe 다!</h1>
+    </header>
+    <main>
+        <aside class="modal" id="config-overlay">
+            <h2>닉네임을 만들어라</h2>
+            <form>
+                <div class="form-control">
+                    <label for="playername">닉네임</label>
+                    <input type="text" name="playername" id="playername" required/>
+                </div>
+                <p id="config-errors"></p>
+                <div>
+                    <button type="reset" class="btn" id="cancel-config-btn">취소</button>
+                    <button type="submit" class="btn">확인</button>
+                </div>
+            </form>
+        </aside>
+        <section id="config">
+            <ol>
+                <li>
+                    <article id="player1Data">
+                        <h2>플레이어 1</h2>
+                        <h3>닉네임</h3>
+                        <p class="symbol">O</p>
+                        <button class="btn btn-alt" id="edit1" data-playerid="1">편집</button>
+                    </article>
+                </li>
+                <li>
+                    <article id="player2Data">
+                        <h2>플레이어 2</h2>
+                        <h3>닉네임</h3>
+                        <p class="symbol">X</p>
+                        <button class="btn btn-alt" id="edit2" data-playerid="2">편집</button>
+                    </article>
+                </li>
+            </ol>
+            <button class="btn" id="newGame">새 게임!</button>
+        </section>
+        <section id="game">
+            <article id="game-over">
+                <h2><span id="winner-name">닉네임</span>이 이겼다!!!</h2>
+            </article>
+
+            <p>네 차례다!<span id="active-player-name">닉네임</span>!</p>
+            <ol id="game-board">
+                <li data-col="1" data-row="1"></li>
+                <li data-col="2" data-row="1"></li>
+                <li data-col="3" data-row="1"></li>
+
+                <li data-col="1" data-row="2"></li>
+                <li data-col="2" data-row="2"></li>
+                <li data-col="3" data-row="2"></li>
+
+                <li data-col="1" data-row="3"></li>
+                <li data-col="2" data-row="3"></li>
+                <li data-col="3" data-row="3"></li>
+
+            </ol>
+        </section>
+    </main>
+</body>
+</html>
