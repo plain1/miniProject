@@ -1,4 +1,4 @@
-#HTML, CSS, JavaScript의 DOM을 이용하여 만든 하나의 컴퓨터에서 할 수 있는 2인용 TicTacToe게임
+# HTML, CSS, JavaScript의 DOM을 이용하여 만든 하나의 컴퓨터에서 할 수 있는 2인용 TicTacToe게임
 
 
 ![image](https://user-images.githubusercontent.com/98394884/209964818-146cf0fd-038a-4454-b5aa-d79bf1b9fce8.png)
